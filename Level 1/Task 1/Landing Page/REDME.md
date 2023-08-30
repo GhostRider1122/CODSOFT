@@ -24,4 +24,4 @@ Hotel Paradise Landing Page is a responsive web page designed to showcase the fe
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/GhostRider1122/CODSOFT/Level 1/Task 1/Landing Page.git
+   git clone https://github.com/GhostRider1122/CODSOFT.git
