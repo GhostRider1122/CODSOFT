@@ -18,11 +18,10 @@ Hotel Paradise Landing Page is a responsive web page designed to showcase the fe
 
 - **Contact Information:** Users can find the hotel's contact information in the footer section, including email and phone details.
 
-- **Sign-Up Popup:** Clicking the "Sign Up" button opens a popup window where users can sign up using their Google account.
 
 ## Usage
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/hotel-paradise-landing-page.git
+   git clone https://github.com/GhostRider1122/CODSOFT.git
