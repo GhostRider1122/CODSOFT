@@ -2,6 +2,8 @@
 
 This is a simple web-based calculator application built using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division, as well as calculate percentages.
 
+![Calculator App](Screenshot.png)
+
 ## Features
 
 - Basic arithmetic operations: Addition (+), Subtraction (-), Multiplication (*), Division (/).
@@ -22,4 +24,4 @@ To run this calculator app locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/calculator-web-app.git
+   git clone https://github.com/GhostRider1122/CODSOFT.git
