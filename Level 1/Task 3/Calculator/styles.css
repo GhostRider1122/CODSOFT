@@ -1,3 +1,8 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('assets/Font/digital-7.italic.ttf');
+   }
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -6,6 +11,10 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f2f2f2;
+    background-image: url('assets/bg/background.jpg'); 
+    background-size: cover; /* Adjust the size to cover the entire page */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-attachment: fixed; /* Keep the background fixed as the page scrolls */
 }
 
 .container {
@@ -20,12 +29,22 @@ body {
 
 .calculator {
     background-color: #444;
-    border-radius: 10px; /* Make the calculator edges rounder */
+    border-radius: 15px; /* Make the calculator edges rounder */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     width: 400px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.display-container {
+    flex: 1; /* Expand the display container to take available space */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the text to the bottom */
 }
 
 .display {
@@ -33,16 +52,16 @@ body {
     padding: 8.5px;
     margin-bottom: 5px;
     font-size: 3rem;
-    background-color: #444;
+    background-color: #000000;
     color: #0ff;
-    height: auto;
+    height: 50px;
     border-radius: 10px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    font-family: "Courier New", monospace; /* Use a monospaced font */
+    font-family: "digital-clock-font", monospace; /* Use a monospaced font */
     text-align: right; /* Align the text to the right for a digital look */
     letter-spacing: 1px; /* Adjust letter spacing for digital appearance */
     font-weight: bold; /* Make the text bold for emphasis */
@@ -57,8 +76,9 @@ body {
 
 button {
     border: none;
-    background-color: #131313;
-    font-size: 1.5em;
+    background-color: #fdfdfd;
+    font-size: 2em;
+    font-weight: bold;
     cursor: pointer;
     color: #0bbdd5;
     transition: background-color 0.2s;
@@ -68,15 +88,20 @@ button {
     height: 100px;
     border-radius: 25px; /* Reset button border-radius */
     margin : 3px;
+    /* Add 3D-like box-shadow */
+    box-shadow: 0px 4px 6px rgba(172, 163, 163, 0.1), 0px 1px 3px rgba(123, 116, 116, 0.2);
+    /* Add gradient for depth */
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1));
 }
 
 
 button:hover {
-    background-color: #888;
+    background-color: #636062;
+    box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.2), 0px 3px 6px rgba(255, 255, 255, 0.3);
 }
 
 button:active {
-    background-color: #555;
+    background-color: #343232;
 }
 
 /* Styling for specific buttons */
@@ -102,21 +127,27 @@ button.equals:hover {
     background-color: #388e3c;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 280px) {
+
+
+    .container {
+        width: 90%; /* Adjust the calculator width for smaller screens */
+        font-size: 16px; /* Reduce the font size for smaller screens */
+    }
+
     .calculator {
         width: 90%; /* Adjust the calculator width for smaller screens */
+        font-size: 16px; /* Reduce the font size for smaller screens */
+        max-width: 400px; /* Set a maximum width */
     }
 
     .buttons {
-        grid-template-columns: repeat(2, 1fr); /* Change the grid to 2 columns for smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns for smaller screens */
+        gap: 0.5px; /* Reduce the gap between buttons */
     }
 
     button {
-        font-size: 1.2em; /* Reduce the font size for smaller screens */
-    }
-
-    .display {
-        font-size: 1.5em; /* Reduce the font size for smaller screens */
-        letter-spacing: 1px; /* Adjust letter spacing for smaller screens */
+        font-size: 1em; /* Reduce the font size for buttons on smaller screens */
+        padding: 10px; /* Adjust button padding for smaller screens */
     }
 }

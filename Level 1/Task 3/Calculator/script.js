@@ -1,6 +1,6 @@
 let displayValue = '';
 let operationPerformed = false;
-let prevResult = null;
+let prevResult = 0;
 let prevOperator = null;
 
 function appendToDisplay(value) {
@@ -9,11 +9,12 @@ function appendToDisplay(value) {
         prevOperator = value;
         displayValue = prevResult + value;
         operationPerformed = false;
-    } else if (operationPerformed) {
+    } else if (operationPerformed || value === prevResult) {
         // Clear the display if a non-operator input follows an operation
         displayValue = value;
         operationPerformed = false;
-    } else {
+    } 
+    else {
         displayValue += value;
     }
     document.getElementById('display').value = displayValue;
@@ -36,11 +37,11 @@ function clearLastCharacter() {
 
 function calculatePercentage() {
     try {
-        let result = eval(displayValue);
-        result /= 100;
-        document.getElementById('display').value = result;
+        let currentValue = eval(displayValue);
+        currentValue /= 100;
+        document.getElementById('display').value = currentValue;
         operationPerformed = true;
-        prevResult = result;
+        prevResult = currentValue;
         prevOperator = displayValue.slice(-1);
     } catch (error) {
         document.getElementById('display').value = 'Error';
@@ -62,3 +63,4 @@ function calculateResult() {
         clearDisplay(); // Reset the calculator state on error
     }
 }
+
