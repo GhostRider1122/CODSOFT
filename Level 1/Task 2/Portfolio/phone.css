@@ -1,40 +1,95 @@
-/* Styles for phone view (max-width: 1050px) */
-@media screen and (max-width: 1050px) {
-    /* Adjust header and navigation for smaller screens */
+nav .logo{
+    font-size: 20px;
+}
+nav ul li{
+    font-size: 15px;
+}
+
+@media (max-width:850px) {
     nav {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 200px;
+    }   
+    nav .logo{
+        font-size: 35px;
     }
+}
+@media (max-width:350px) {
+   
+    nav .logo{
+        font-size: 20px;
+    }
+}
 
-    ul {
+@media (max-width:600px) {
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+}
+
+/* home */
+@media (max-width:900px) {
+    .home {
+        display: flex;
         flex-direction: column;
-        margin-top: 10px;
-    }
+    }   
+}
 
-    ul li {
-        margin-bottom: 10px;
-    }
+@media (max-width:600px) {
+.item1 img {
+    height: 200px;
+    width: 200px;
+    border-radius: 170px;
+     border: 20px solid black;
+  }
+  .item2{
+    font-size: 20px;
+  }
+  .item3{
+    font-size: 20px;
+    padding: 4px 4px;
+    width: 150px;
+  }
+}
 
-    /* Modify home section for smaller screens */
-    #home {
-        padding: 60px 0;
-    }
+/* about */
 
-    #home h1 {
-        font-size: 28px;
+@media (max-width:900px) {
+    #about .introbox {
+      font-size: 15px;
+      width: 300px;
+      height: fit-content;
+      padding: 15px;
+    }   
+    #about{
+        height: 1000px;
     }
+}
 
-    #home p {
-        font-size: 16px;
+/* skill */
+
+@media (max-width:750px) {
+    .board{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+    #skill{
+        height: 1300px;
     }
+}
 
-    /* Adjust padding for other sections on smaller screens */
-    #about, #skill, #project, #contact {
-        padding: 40px 0;
-    }
-
-    /* Decrease font size for section headings on smaller screens */
-    #about h1, #skill h1, #project h1, #contact h1 {
-        font-size: 28px;
+/* projects */
+@media (max-width:750px) {
+    .board{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+    #project{
+        height: 1300px;
     }
 }

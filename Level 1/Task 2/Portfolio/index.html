@@ -13,7 +13,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="My Logo">
+                <img src="assets/logo.png" alt="My Logo">
             </div>
             <ul>
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
@@ -25,9 +25,9 @@
         </nav>
     </header>
 
-    <section id="home" class="fade-section">
+    <section id="home">
         <div class="home">
-            <div class="item1"><img src="mylogo.jpg" alt=""></div>
+            <div class="item1"><img src="assets/BG/profile.jpg" alt=""></div>
             <div class="item2">
                 <p>Hello, I am</p>
                 <h1>Anish Kanti Ghorai</h1>
@@ -74,7 +74,7 @@
         <div class="board">
             <div class="skillbox">
                 <div class="image">
-                    <div class="img"><img src="fontendimage.jpg" alt="image"></div>
+                    <div class="img"><img src="assets/skills_img/web_dev.png" alt="image"></div>
                     <h2>Web Development</h2>
                     <ul>
                         <li>HTML</li>
@@ -85,30 +85,40 @@
             </div>
             <div class="skillbox">
                 <div class="image">
-                    <div class="img"><img src="coder.jpg" alt="image"></div>
+                    <div class="img"><img src="assets/skills_img/programming.jpg" alt="image"></div>
                     <h2>Programming</h2>
                     <ul>
                         <li>PYTHON</li>
                         <li>C</li>
+                        <li>JAVA</li>
+                        <li>MATLAB</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="section fade-section" >
-        <h2>My Projects</h2>
+    <section id="portfolio" class="section fade-section " >
+        <p style="font-size: 20px;">Browse My</p>
+        <h1>PROJECTS</h1>
         <br>
         <div class="portfolio-item">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
+            <div class="skillbox">
+                <div class="image">
+                    <div class="img"><a href="https://ghostrider1122.github.io/Landing_Page_Demo/" target="_blank"><img src="assets/project_img/project1.png" alt="image"></a></div>
+                    <h2>Landing Page</h2>
+                </div>
+            </div>
+
+            <div class="skillbox">
+                <div class="image">
+                    <div class="img"><a href="https://ghostrider1122.github.io/Calculator-Web-App/" target="_blank"><img src="assets/project_img/project2.png" alt="image"></a></div>
+                    <h2>Calculator</h2>
+                </div>
+            </div>
+
         </div>
-        <div class="portfolio-item">
-            <img src="project2.jpg" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-        </div>
+        
     </section>
 
     <section id="contact" class="section-item">
@@ -170,6 +180,11 @@
                 });
             });
         });
+
+        if (performance.navigation.type === 1) {
+            // Scroll to the top immediately after a refresh
+            window.scrollTo(0, 0);
+        }
     </script>
 
 </body>
