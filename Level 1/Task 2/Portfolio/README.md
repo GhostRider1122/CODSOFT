@@ -9,7 +9,6 @@ Welcome to the GitHub repository for my personal portfolio website. This website
 - [Projects](#projects)
 - [Contact](#contact)
 - [Responsiveness](#responsiveness)
-- [License](#license)
 
 ## About
 
@@ -30,10 +29,6 @@ You can reach out to me through the contact section. I've provided my email and 
 ## Responsiveness
 
 This website is designed to be responsive and adapt to different screen sizes, including smartphones and desktops. Media queries are used to adjust the layout and styling for optimal viewing on various devices.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
 
