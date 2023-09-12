@@ -84,12 +84,24 @@ nav ul li{
 
 /* projects */
 @media (max-width:750px) {
-    .board{
+    .portfolio-item{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }   
-    #project{
+    #portfolio{
         height: 1300px;
     }
 }
+
+@media (max-width:750px) {
+    .section-item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+    #contact{
+        height: 1300px;
+    }
+}
+
